@@ -6,12 +6,12 @@ Commands to run this project
    ####To Rebuild the docker image if there is any change
 2. `docker build -f Dockerfile -t ashishkarn/spring-docker .`
 3. `docker run -p 8881:8080 --name spring ashishkarn/spring-docker`
-4. ####Check localhost:8881/v1/greeting
-5. `docker container ls`
-6. `docker stop spring`
-7. `docker rm spring`
+   ####Check localhost:8881/v1/greeting
+4. `docker container ls`
+5. `docker stop spring`
+6. `docker rm spring`
 
-####Running Through Kubernetes
+   ####Running Through Kubernetes
 
 1. `kubectl create deployment spring-docker --image ashishkarn/spring-docker`
 2. `kubectl get po`
@@ -19,7 +19,7 @@ Commands to run this project
 4. `kubectl get po -w`
 5. `kubectl expose deployment/spring-docker --port 8080 --name spring-docker --type NodePort`
 6. `kubectl get services` 
-check port here and hit localhost:[port]/v1/greeting  -> 
-   refresh multiple times to see load balancing
+   ####check port here and hit localhost:[port]/v1/greeting  -> 
+   ####refresh multiple times to see load balancing
 7. `kubectl delete deployment/spring-docker`
     
