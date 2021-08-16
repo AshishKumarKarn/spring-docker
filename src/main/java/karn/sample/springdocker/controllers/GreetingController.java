@@ -26,7 +26,7 @@ public class GreetingController {
         System.out.println(headers.toString());
         LOGGER.info("headers:: " + headers);
         LOGGER.info("X-Forwarded-For " + headers.get("X-Forwarded-For"));
-        LOGGER.info("Invoking returns " + myComponent.invoke());
+        LOGGER.info("Invoking myComponent returns " + myComponent.invoke());
         return "Hello Obj " + this;
     }
 }
